@@ -11,10 +11,7 @@ const fileupload=require("express-fileupload");
 app.use(express.json());
 app.use(cors());
 app.use(cookieparser());
-if ( process.env.NODE_ENV == "production"){
 
-  app.use(express.static("client/build"))
-}
 app.use(fileupload({
     useTempFiles:true
 }));
